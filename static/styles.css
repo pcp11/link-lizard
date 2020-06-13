@@ -9,6 +9,22 @@
     line-height: 1.4;
 }
 
+.container {
+    max-width: 960px;
+}
+
 .url-shorten-section {
     background-color: #95d3a7;
+}
+
+.url-shorten-section p {
+    font-size:14;
+    color: #6c757d;
+    text-align: center;
+}
+
+footer {
+    font-size: 14;
+    color: #6c757d;
+    text-align: end;
 }
