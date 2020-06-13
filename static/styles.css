@@ -1,0 +1,16 @@
+.jumbotron {
+    background-color: white;
+    min-height: 650px;
+}
+
+.jumbotron h2 {
+    color: #56575b;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+.url-shorten-section {
+    background-color: #95d3a7;
+    min-height: 300px;
+}
