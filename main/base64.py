@@ -2,11 +2,12 @@ import base64
 
 
 def encode(message):
-    message_bytes = message.encode("utf-8")
-    encoded_bytes = base64.b64encode(message_bytes)
-    return str(encoded_bytes, "utf-8")
+    message_bytes = message.encode("ascii")
+    base64_bytes = base64.b64encode(message_bytes)
+    return base64_bytes.decode("ascii")
 
 
 def decode(base64_message):
-    base64_bytes = base64.b64decode(base64_message)
-    return str(base64_bytes, "utf-8")
+    base64_bytes = base64_message.encode("ascii")
+    message_bytes = base64.b64decode(base64_bytes)
+    return message_bytes.decode("ascii")
