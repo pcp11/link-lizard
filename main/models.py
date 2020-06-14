@@ -1,3 +1,4 @@
+from django.core.validators import URLValidator
 from django.utils import timezone
 from django.db import models
 
@@ -5,7 +6,7 @@ from main.base64 import encode
 
 
 class URLMapping(models.Model):
-    original_url = models.URLField(max_length=1000)
+    original_url = models.TextField(blank=False, validators=[URLValidator])
     created = models.DateTimeField(editable=False)
 
     @property
