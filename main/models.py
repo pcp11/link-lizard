@@ -5,7 +5,7 @@ from main.base64 import encode
 
 
 class URLMapping(models.Model):
-    original_url = models.URLField()
+    original_url = models.URLField(max_length=1000)
     created = models.DateTimeField(editable=False)
 
     @property
