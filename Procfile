@@ -1,0 +1,1 @@
+web: gunicorn link_lizard.wsgi --log-file -
