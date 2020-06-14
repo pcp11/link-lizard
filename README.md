@@ -1,6 +1,10 @@
-# Link Lizard - An open-source URL shortening tool
+# Link Lizard - An open-source URL shortening tool (demo project)
 
 Visit [Link Lizard](https://lzrd.herokuapp.com/) hosted on Heroku.
+
+### This website was build with the following tools
+
+Python (Django) for backend, Bootstrap for frontend, Heroku for deployment
 
 ---
 
