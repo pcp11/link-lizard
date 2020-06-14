@@ -2,7 +2,7 @@
 
 Visit [Link Lizard](https://lzrd.herokuapp.com/) hosted on Heroku.
 
-### This website was build with the following tools
+### This website was build with the following tools:
 
 Python (Django) for backend, Bootstrap for frontend, Heroku for deployment
 
