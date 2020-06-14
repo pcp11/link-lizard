@@ -1,6 +1,6 @@
 # Link Lizard - An open-source URL shortening tool
 
-Welcome to [Link Lizard](https://lzrd.herokuapp.com/)
+Visit [Link Lizard](https://lzrd.herokuapp.com/) hosted on Heroku.
 
 ---
 
