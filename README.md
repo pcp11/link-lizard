@@ -1,14 +1,12 @@
-# Link Lizard - An open-source URL shortening tool (demo project)
+# Link Lizard - URL shortening tool
 
-Visit [Link Lizard](https://lzrd.herokuapp.com/) hosted on Heroku.
+[![Build Status](https://travis-ci.org/pcp11/link-lizard.svg?branch=master)](https://travis-ci.org/github/pcp11/link-lizard)
+![GitHub](https://img.shields.io/github/license/pcp11/link-lizard)
+[![Deployed on Heroku](https://img.shields.io/badge/heroku-deployed-blueviolet.svg?logo=heroku)](https://startup-valley.herokuapp.com/)
+![GitHub Pipenv locked Python version](https://img.shields.io/github/pipenv/locked/python-version/pcp11/link-lizard)
 
-### This website was build with the following tools:
 
-Python (Django) for backend, Bootstrap for frontend, Heroku for deployment
-
----
-
-## How to run this web app locally
+## How to run locally
 
 ### 1. Install pipenv and go into the shell
 
