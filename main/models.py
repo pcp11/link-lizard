@@ -1,18 +1,12 @@
 from django.core.validators import URLValidator
-from django.utils import timezone
 from django.db import models
-
-from main.base64 import encode
+from django.utils import timezone
 
 
 class URLMapping(models.Model):
-    original_url = models.TextField(blank=False, validators=[URLValidator])
+    original_url = models.TextField(blank=False, validators=[URLValidator()])
+    generated_hash = models.TextField(blank=False, unique=True, db_index=True)
     created = models.DateTimeField(editable=False)
-
-    @property
-    def generated_hash(self):
-        id_str = str(self.id)
-        return encode(id_str)
 
     def save(self, *args, **kwargs):
         """ On save, update timestamps """
