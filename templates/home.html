@@ -1,7 +1,33 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div>
-    <!-- No custom content-->
+<div class="container-fluid url-shorten-section pt-5 pb-4">
+    <div class="container">
+        <form id="form" method="post" class="mb-5">
+            {% csrf_token %}
+            <div class="d-flex flex-column align-items-start">
+                <div class="input-group mb-3">
+                    {{ form.original_url }}
+                    <div class="input-group-append">
+                        <button class="btn btn-secondary px-5" type="submit">Shorten</button>
+                    </div>
+                    <div id="original-url-invalid-feedback" class="invalid-feedback"></div>
+                </div>
+                <div class="input-group" style="width: 50%;">
+                    {{ form.generated_hash }}
+                    <div id="generated-hash-invalid-feedback" class="invalid-feedback"></div>
+                </div>
+                {{ form.original_url.errors }}
+                {{ form.generated_hash.errors }}
+            </div>
+        </form>
+
+        {{ generated_url }}
+        <div id="generated_urls"></div>
+    </div>
+    <div class="mt-5">
+        <p>By using our service you accept the Terms and Privacy.</p>
+    </div>
 </div>
+
 {% endblock %}
