@@ -12,7 +12,10 @@ dj-database-url = "*"
 nanoid = "*"
 
 [dev-packages]
-pylint = "*"
+pytest = "*"
+pytest-pylint = "*"
+pytest-flake8 = "*"
+pylint-django = "*"
 selenium = "*"
 webdriver-manager = "*"
 
