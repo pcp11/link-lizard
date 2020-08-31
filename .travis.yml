@@ -5,6 +5,7 @@ python:
 install:
   - pip install pipenv
   - pipenv install --dev
+  - python manage.py migrate
 # command to run tests
 script:
   - python manage.py test
