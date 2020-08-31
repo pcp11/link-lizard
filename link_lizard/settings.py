@@ -23,10 +23,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '+8((w8y2920c8z1keigr*@d=hy%5h8e*t4un2)q^@vqx1!0%i+'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+HEROKU = ('ENV' in os.environ and os.environ['ENV'] == 'heroku')
+DEBUG = not HEROKU
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'https://git.heroku.com/frozen-escarpment-09010.git']
+if DEBUG:
+    ALLOWED_HOSTS = ['*']
+else:
+    ALLOWED_HOSTS = ['https://git.heroku.com/frozen-escarpment-09010.git']
 
 # Application definition
 
