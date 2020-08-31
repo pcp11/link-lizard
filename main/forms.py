@@ -11,4 +11,4 @@ class URLMappingForm(ModelForm):
 
     class Meta:
         model = URLMapping
-        fields = ('original_url', 'generated_hash')
+        fields = ("original_url", "generated_hash")
