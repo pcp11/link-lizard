@@ -12,4 +12,4 @@ class URLMapping(models.Model):
         """ On save, update timestamps """
         if not self.id:
             self.created = timezone.now()
-        return super(URLMapping, self).save(*args, **kwargs)
+        return super().save(*args, **kwargs)

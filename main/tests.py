@@ -17,13 +17,13 @@ class FormTest(LiveServerTestCase):
 
         self.browser = webdriver.Firefox(executable_path=GeckoDriverManager().install(), options=options)
         self.browser.implicitly_wait(10)  # seconds
-        super(FormTest, self).setUp()
+        super().setUp()
 
     def tearDown(self):
         self.browser.quit()
-        super(FormTest, self).tearDown()
+        super().tearDown()
 
-    def testForm(self):
+    def generating_url_test(self):
         browser = self.browser
         browser.get("%s%s" % (self.live_server_url, "/"))
 

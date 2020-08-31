@@ -1,0 +1,5 @@
+[MASTER]
+ignore=static,templates,migrations
+
+[FORMAT]
+max-line-length=150
