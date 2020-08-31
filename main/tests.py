@@ -23,7 +23,7 @@ class FormTest(LiveServerTestCase):
         self.browser.quit()
         super().tearDown()
 
-    def generating_url_test(self):
+    def test_generating_url(self):
         """
         Generate a shortened URL using headless Firefox
         """
