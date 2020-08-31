@@ -14,6 +14,7 @@ nanoid = "*"
 [dev-packages]
 pylint = "*"
 selenium = "*"
+webdriver-manager = "*"
 
 [requires]
 python_version = "3.8"
