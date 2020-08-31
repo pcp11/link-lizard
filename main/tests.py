@@ -14,6 +14,7 @@ class FormTest(LiveServerTestCase):
     def setUp(self):
         options = Options()
         options.headless = True
+
         self.browser = webdriver.Firefox(executable_path=GeckoDriverManager().install(), options=options)
         self.browser.implicitly_wait(10)  # seconds
         super(FormTest, self).setUp()

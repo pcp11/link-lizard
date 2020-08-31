@@ -24,10 +24,10 @@ def index(request):
             generated_url = base_url + mapping.generated_hash
 
             return HttpResponse(json.dumps({"original_url": original_url, "generated_url": generated_url}))
-        else:
-            return HttpResponse(json.dumps({"errors": form.errors}))
-    else:
-        form = URLMappingForm()
+
+        return HttpResponse(json.dumps({"errors": form.errors}))
+
+    form = URLMappingForm()
     return render(request, 'home.html', {"form": form})
 
 
