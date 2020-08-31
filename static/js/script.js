@@ -29,31 +29,30 @@ function showError(error, originalUrlInput, generatedHashInput) {
 function handleGeneratedUrl(data) {
     const originalUrl = data.original_url;
     const generatedUrl = data.generated_url;
-    const wrapper = document.createElement("div");
+    const cardWrapper = document.createElement("div");
+    cardWrapper.classList.add("card", "mb-1");
 
-    wrapper.innerHTML = `<div class="card mb-1">
-        <div class="card-body">
-            <div class="row align-items-center">
-                <div class="col text-truncate">
-                    ${originalUrl}
-                </div>
-                <div class="col" style="text-align: right">
-                    <div class="d-flex align-items-center justify-content-end">
-                        <div class="mr-3">
-                            <a id="generatedLink" href="${generatedUrl}" target="_blank">${generatedUrl}</a>
-                        </div>
-                        <div>
-                            <button onclick="copyToClipboard(\'${generatedUrl}\')" class="btn btn-outline-secondary" type="submit">
-                                Copy
-                            </button>
-                        </div>
+    cardWrapper.innerHTML = `<div class="card-body">
+        <div class="row align-items-center">
+            <div class="col text-truncate">
+                ${originalUrl}
+            </div>
+            <div class="col" style="text-align: right">
+                <div class="d-flex align-items-center justify-content-end">
+                    <div class="mr-3">
+                        <a id="generatedLink" href="${generatedUrl}" target="_blank">${generatedUrl}</a>
+                    </div>
+                    <div>
+                        <button onclick="copyToClipboard(\'${generatedUrl}\')" class="btn btn-outline-secondary" type="submit">
+                            Copy
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>`;
 
-    document.getElementById("generated_urls").prepend(wrapper);
+    document.getElementById("generated_urls").prepend(cardWrapper);
     document.getElementById("form").reset();
 }
 
