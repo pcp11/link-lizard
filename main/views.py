@@ -1,6 +1,4 @@
-import json
-
-from django.http import HttpResponseRedirect, HttpResponse
+from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, get_object_or_404
 from nanoid import generate
 
@@ -9,6 +7,9 @@ from main.models import URLMapping
 
 
 def index(request):
+    """
+    Index view for handling form data and generating shortened URLs
+    """
     if request.method == 'POST':
         form = URLMappingForm(request.POST)
         if form.is_valid():
@@ -23,14 +24,17 @@ def index(request):
             base_url = request.META['HTTP_ORIGIN'] + "/"
             generated_url = base_url + mapping.generated_hash
 
-            return HttpResponse(json.dumps({"original_url": original_url, "generated_url": generated_url}))
+            return JsonResponse({"original_url": original_url, "generated_url": generated_url})
 
-        return HttpResponse(json.dumps({"errors": form.errors}))
+        return JsonResponse({"errors": form.errors})
 
     form = URLMappingForm()
     return render(request, 'home.html', {"form": form})
 
 
 def redirect(_, generated_hash):
+    """
+    Redirect to the original URL which belongs to the hash
+    """
     mapping = get_object_or_404(URLMapping, generated_hash=generated_hash)
     return HttpResponseRedirect(mapping.original_url)

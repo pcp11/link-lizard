@@ -8,8 +8,9 @@ class URLMapping(models.Model):
     generated_hash = models.TextField(blank=False, unique=True, db_index=True)
     created = models.DateTimeField(editable=False)
 
+    # pylint: disable=signature-differs
     def save(self, *args, **kwargs):
         """ On save, update timestamps """
         if not self.id:
             self.created = timezone.now()
-        return super().save(*args, **kwargs)
+        super().save(*args, **kwargs)

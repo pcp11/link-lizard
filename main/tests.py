@@ -24,6 +24,9 @@ class FormTest(LiveServerTestCase):
         super().tearDown()
 
     def generating_url_test(self):
+        """
+        Generate a shortened URL using headless Firefox
+        """
         browser = self.browser
         browser.get("%s%s" % (self.live_server_url, "/"))
 
