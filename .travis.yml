@@ -7,4 +7,6 @@ install:
   - pipenv install --dev
 # command to run tests
 script:
+  - pytest --pylint
+  - pytest --flake8
   - python manage.py test
