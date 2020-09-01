@@ -29,7 +29,7 @@ DEBUG = not HEROKU
 if DEBUG:
     ALLOWED_HOSTS = ['*']
 else:
-    ALLOWED_HOSTS = ['https://git.heroku.com/frozen-escarpment-09010.git']
+    ALLOWED_HOSTS = ['https://git.heroku.com/lzrd.git']
 
 # Application definition
 
