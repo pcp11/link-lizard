@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = '+8((w8y2920c8z1keigr*@d=hy%5h8e*t4un2)q^@vqx1!0%i+'
 
 HEROKU = ('ENV' in os.environ and os.environ['ENV'] == 'heroku')
 DEBUG = not HEROKU
