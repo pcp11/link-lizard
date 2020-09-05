@@ -1,8 +1,8 @@
 # Link Lizard - URL shortening tool
 
 [![Build Status](https://travis-ci.org/pcp11/link-lizard.svg?branch=master)](https://travis-ci.org/github/pcp11/link-lizard)
-[![GitHub](https://img.shields.io/github/license/pcp11/startup-valley)](https://github.com/pcp11/link-lizard/blob/master/LICENSE)
-[![Deployed on Heroku](https://img.shields.io/badge/heroku-deployed-blueviolet.svg?logo=heroku)](https://startup-valley.herokuapp.com/)
+[![GitHub](https://img.shields.io/github/license/pcp11/link-lizard)](https://github.com/pcp11/link-lizard/blob/master/LICENSE)
+[![Deployed on Heroku](https://img.shields.io/badge/heroku-deployed-blueviolet.svg?logo=heroku)](https://lzrd.herokuapp.com/)
 [![GitHub Pipenv locked Python version](https://img.shields.io/github/pipenv/locked/python-version/pcp11/link-lizard?logo=python)](https://www.python.org/)
 [![djangoversion](https://img.shields.io/badge/django-3.0.7-brightgreen?logo=django)](https://www.djangoproject.com/)
 [![bootstrapversion](https://img.shields.io/badge/bootstrap-4.4.1-brightgreen?logo=bootstrap)](https://getbootstrap.com/)
