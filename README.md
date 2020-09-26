@@ -7,6 +7,8 @@
 [![djangoversion](https://img.shields.io/badge/django-3.0.7-brightgreen?logo=django)](https://www.djangoproject.com/)
 [![bootstrapversion](https://img.shields.io/badge/bootstrap-4.4.1-brightgreen?logo=bootstrap)](https://getbootstrap.com/)
 
+A live deployment is available on Heroku: https://lzrd.herokuapp.com/
+
 ## How to run locally
 
 ### 1. Install pipenv and go into the shell
